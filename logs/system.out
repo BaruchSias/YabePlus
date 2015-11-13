@@ -1,0 +1,35 @@
+Listening for transport dt_socket at address: 8000
+11:51:29,973 INFO  ~ Starting C:\Users\Baruch\Downloads\Exe Programas\Play Framework\play-1.3.1\yabe
+:: loading settings :: url = jar:file:/C:/Users/Baruch/Downloads/Exe%20Programas/Play%20Framework/play-1.3.1/framework/lib/ivy-2.4.0.jar!/org/apache/ivy/core/settings/ivysettings.xml
+11:51:30,312 INFO  ~ Module crud is available (C:\Users\Baruch\Downloads\Exe Programas\Play Framework\play-1.3.1\modules\crud)
+11:51:31,032 WARN  ~ You're running Play! in DEV mode
+11:51:31,131 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
+~ Server is up and running
+12:11:56,312 ERROR ~ 
+
+@6o122560o
+Internal Server Error (500) for request GET /
+
+Compilation error (In /app/controllers/Secure/Comments.java around line 11)
+The file /app/controllers/Secure/Comments.java could not be compiled. Error raised is : CRUD cannot be resolved to a type
+
+play.exceptions.CompilationException: CRUD cannot be resolved to a type
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:256)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:292)
+	at play.classloading.ApplicationClassloader.getAllClasses(ApplicationClassloader.java:428)
+	at play.classloading.ApplicationClassloader.getAssignableClasses(ApplicationClassloader.java:457)
+	at {module:crud}/app/views/tags/crud/types.tag.(line:3)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:260)
+	at play.templates.GroovyTemplate$ExecutableTemplate.invokeTag(GroovyTemplate.java:414)
+	at {module:crud}/conf/routes.(line:4)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:260)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:208)
+	at play.mvc.Router.parse(Router.java:161)
+	at play.mvc.Router.parse(Router.java:189)
+	at play.mvc.Router.parse(Router.java:163)
+	at play.mvc.Router.load(Router.java:47)
+	at play.mvc.Router.detectChanges(Router.java:218)
+	at Invocation.HTTP Request(Play!)

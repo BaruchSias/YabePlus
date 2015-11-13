@@ -1,0 +1,41 @@
+28 oct 2015 10:36:10,019 INFO  ~ Starting C:\Users\Baruch\Downloads\Exe Programas\Play Framework\play-1.3.1\yabe
+28 oct 2015 10:36:10,780 WARN  ~ You're running Play! in DEV mode
+28 oct 2015 10:36:10,887 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
+28 oct 2015 10:36:17,905 INFO  ~ Connected to jdbc:h2:mem:play;MODE=MYSQL;LOCK_MODE=0 for default
+28 oct 2015 10:36:18,953 ERROR ~ HHH000389: Unsuccessful: alter table Comment drop constraint FK_apirq8ka64iidc18f3k6x5tc5
+28 oct 2015 10:36:18,953 ERROR ~ Tabla "COMMENT" no encontrada
+Table "COMMENT" not found; SQL statement:
+alter table Comment drop constraint FK_apirq8ka64iidc18f3k6x5tc5 [42102-185]
+28 oct 2015 10:36:18,954 ERROR ~ HHH000389: Unsuccessful: alter table Post drop constraint FK_m7j5gwmpa7dklv5bnc41ertmi
+28 oct 2015 10:36:18,955 ERROR ~ Tabla "POST" no encontrada
+Table "POST" not found; SQL statement:
+alter table Post drop constraint FK_m7j5gwmpa7dklv5bnc41ertmi [42102-185]
+28 oct 2015 10:36:18,956 ERROR ~ HHH000389: Unsuccessful: alter table Post_Comment drop constraint FK_5nd2ucnctmvwq31ovab2vi00x
+28 oct 2015 10:36:18,957 ERROR ~ Tabla "POST_COMMENT" no encontrada
+Table "POST_COMMENT" not found; SQL statement:
+alter table Post_Comment drop constraint FK_5nd2ucnctmvwq31ovab2vi00x [42102-185]
+28 oct 2015 10:36:18,958 ERROR ~ HHH000389: Unsuccessful: alter table Post_Comment drop constraint FK_er6ity1dxt1bobfug8s7ibn2o
+28 oct 2015 10:36:18,958 ERROR ~ Tabla "POST_COMMENT" no encontrada
+Table "POST_COMMENT" not found; SQL statement:
+alter table Post_Comment drop constraint FK_er6ity1dxt1bobfug8s7ibn2o [42102-185]
+28 oct 2015 10:36:18,960 ERROR ~ HHH000389: Unsuccessful: alter table Post_Tag drop constraint FK_t0ml4xx4nhnqjwrhxugwlvrpm
+28 oct 2015 10:36:18,960 ERROR ~ Tabla "POST_TAG" no encontrada
+Table "POST_TAG" not found; SQL statement:
+alter table Post_Tag drop constraint FK_t0ml4xx4nhnqjwrhxugwlvrpm [42102-185]
+28 oct 2015 10:36:18,961 ERROR ~ HHH000389: Unsuccessful: alter table Post_Tag drop constraint FK_ex1oknil4le2tootduvjnllp6
+28 oct 2015 10:36:18,961 ERROR ~ Tabla "POST_TAG" no encontrada
+Table "POST_TAG" not found; SQL statement:
+alter table Post_Tag drop constraint FK_ex1oknil4le2tootduvjnllp6 [42102-185]
+28 oct 2015 10:36:19,105 INFO  ~ Application 'yabe' is now started !
+28 oct 2015 10:36:35,407 WARN  ~ SQL Error: 23503, SQLState: 23503
+28 oct 2015 10:36:35,407 ERROR ~ Violación de una restricción de Integridad Referencial: "FK_APIRQ8KA64IIDC18F3K6X5TC5: PUBLIC.COMMENT FOREIGN KEY(POST_ID) REFERENCES PUBLIC.POST(ID) (4)"
+Referential integrity constraint violation: "FK_APIRQ8KA64IIDC18F3K6X5TC5: PUBLIC.COMMENT FOREIGN KEY(POST_ID) REFERENCES PUBLIC.POST(ID) (4)"; SQL statement:
+delete from Post where id=? [23503-185]
+28 oct 2015 10:38:58,261 WARN  ~ SQL Error: 23503, SQLState: 23503
+28 oct 2015 10:38:58,261 ERROR ~ Violación de una restricción de Integridad Referencial: "FK_APIRQ8KA64IIDC18F3K6X5TC5: PUBLIC.COMMENT FOREIGN KEY(POST_ID) REFERENCES PUBLIC.POST(ID) (9)"
+Referential integrity constraint violation: "FK_APIRQ8KA64IIDC18F3K6X5TC5: PUBLIC.COMMENT FOREIGN KEY(POST_ID) REFERENCES PUBLIC.POST(ID) (9)"; SQL statement:
+delete from Post where id=? [23503-185]
+28 oct 2015 10:39:33,540 WARN  ~ SQL Error: 23503, SQLState: 23503
+28 oct 2015 10:39:33,540 ERROR ~ Violación de una restricción de Integridad Referencial: "FK_APIRQ8KA64IIDC18F3K6X5TC5: PUBLIC.COMMENT FOREIGN KEY(POST_ID) REFERENCES PUBLIC.POST(ID) (14)"
+Referential integrity constraint violation: "FK_APIRQ8KA64IIDC18F3K6X5TC5: PUBLIC.COMMENT FOREIGN KEY(POST_ID) REFERENCES PUBLIC.POST(ID) (14)"; SQL statement:
+delete from Post where id=? [23503-185]

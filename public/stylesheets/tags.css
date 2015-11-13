@@ -1,0 +1,13 @@
+/* 
+    Created on : 28/10/2015, 11:32:06 AM
+    Author     : Baruch
+*/
+
+.tags-list .tag {
+     cursor: pointer;
+     padding: 1px 4px;
+}
+.crudField .tags-list .selected {
+     background: #222;
+     color: #fff;
+}

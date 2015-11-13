@@ -1,0 +1,6 @@
+views.Application.listTagged.title = Posts tagged with %s 
+&{'views.Application.listTagged.title', tag}
+views.Admin.index.welcome = Welcome %1$s, <span>you have written %2$s posts so far</span>
+&{'views.Admin.index.welcome', user, posts.size()}
+views.Admin.index.welcome = Welcome %1$s, <span>you have written %2$s %3$s so far</span>
+&{'views.Admin.index.welcome', user, posts.size(), posts.pluralize(messages.get('post'), messages.get('posts'))}

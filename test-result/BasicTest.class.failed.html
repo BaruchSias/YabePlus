@@ -1,0 +1,250 @@
+<html>
+    <head>
+        <title>Test results for BasicTest.class</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <style type="text/css">
+            body {
+                font-family: Arial, Sans;
+                margin: 0;
+                padding: 0;
+            }
+            table {
+                width: 100%;
+            }
+            #header {
+                padding: 15px;
+                margin-bottom: 20px;
+            }
+            #results {
+                padding: 15px;
+            }
+            #header h1 {
+                margin-top: 0;
+            }
+            #header.success {
+                background: #81CF5A !important;
+            }
+            .passed span {
+                background: #81CF5A !important;
+                padding: 3px 5px;
+            }
+            #header.failed {
+                background: #EF6868 !important;
+            }
+            .failed span {
+                background: #EF6868 !important;
+                padding: 3px 5px;
+            }
+            table .source {
+                margin-top: 10px;
+            }
+            table .source span {
+                color: #fff;
+                font-size: 85%;
+                padding: 1px 3px;
+                background: #666;
+            }
+            table .sourceLine {
+                border-left: 3px solid #c00;
+                padding: 4px 3px;
+                color: #000;
+                font-size: 85%;
+                margin-bottom: 10px;
+            }
+            .error {
+                color: #c00;
+            }
+            table td {
+                padding: 5px 0;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <div id="header" class="block failed">
+            <h1>
+                BasicTest.class
+            </h1>
+            <p>
+                FAILED
+            </p>
+        </div>
+        
+        <div id="results">
+            <table>
+                                <tr>
+                    <td width="20%" class="failed" valign="top">
+                        <span>useTheCommentsRelation</span>
+                    </td>
+                    <td class="error" valign="top">
+                                                <strong>A javax.persistence.PersistenceException has been caught, org.hibernate.exception.ConstraintViolationException: could not execute statement</strong>
+                                                <div class="source">
+                            <span>In /test/BasicTest.java, line 115 :</span>
+                        </div>
+                        <div class="sourceLine">
+                            <span>
+                                
+                                            bobPost.delete();
+                                
+                            </span>
+                        </div>
+                                                                        <a href="#" onclick="toggle_trace(this); return false;">Show trace</a>
+                        <pre data-role="trace">javax.persistence.PersistenceException: org.hibernate.exception.ConstraintViolationException: could not execute statement
+	at org.hibernate.ejb.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1387)
+	at org.hibernate.ejb.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1310)
+	at org.hibernate.ejb.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1316)
+	at org.hibernate.ejb.AbstractEntityManagerImpl.flush(AbstractEntityManagerImpl.java:999)
+	at play.db.jpa.JPABase._delete(JPABase.java:73)
+	at play.db.jpa.GenericModel.delete(GenericModel.java:267)
+	at BasicTest.useTheCommentsRelation(BasicTest.java:115)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at play.test.PlayJUnitRunner$StartPlay$2$1.evaluate(PlayJUnitRunner.java:126)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at play.test.PlayJUnitRunner.run(PlayJUnitRunner.java:70)
+	at org.junit.runners.Suite.runChild(Suite.java:128)
+	at org.junit.runners.Suite.runChild(Suite.java:27)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:105)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:94)
+	at play.test.TestEngine.run(TestEngine.java:187)
+	at controllers.TestRunner$1.doJobWithResult(TestRunner.java:101)
+	at controllers.TestRunner$1.doJobWithResult(TestRunner.java:1)
+	at play.jobs.Job$2.apply(Job.java:199)
+	at play.db.jpa.JPA.withTransaction(JPA.java:258)
+	at play.db.jpa.JPA.withinFilter(JPA.java:217)
+	at play.db.jpa.JPAPlugin$TransactionalFilter.withinFilter(JPAPlugin.java:299)
+	at play.jobs.Job.withinFilter(Job.java:176)
+	at play.jobs.Job.call(Job.java:196)
+	at play.jobs.Job$1.call(Job.java:118)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.hibernate.exception.ConstraintViolationException: could not execute statement
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:129)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:49)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:124)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:109)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:189)
+	at org.hibernate.engine.jdbc.batch.internal.NonBatchingBatch.addToBatch(NonBatchingBatch.java:59)
+	at org.hibernate.persister.entity.AbstractEntityPersister.delete(AbstractEntityPersister.java:3355)
+	at org.hibernate.persister.entity.AbstractEntityPersister.delete(AbstractEntityPersister.java:3558)
+	at org.hibernate.action.internal.EntityDeleteAction.execute(EntityDeleteAction.java:102)
+	at org.hibernate.engine.spi.ActionQueue.execute(ActionQueue.java:395)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:387)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:310)
+	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:373)
+	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:56)
+	at org.hibernate.internal.SessionImpl.flush(SessionImpl.java:1159)
+	at org.hibernate.ejb.AbstractEntityManagerImpl.flush(AbstractEntityManagerImpl.java:996)
+	... 51 more
+Caused by: org.h2.jdbc.JdbcSQLException: Violación de una restricción de Integridad Referencial: "FK_APIRQ8KA64IIDC18F3K6X5TC5: PUBLIC.COMMENT FOREIGN KEY(POST_ID) REFERENCES PUBLIC.POST(ID) (14)"
+Referential integrity constraint violation: "FK_APIRQ8KA64IIDC18F3K6X5TC5: PUBLIC.COMMENT FOREIGN KEY(POST_ID) REFERENCES PUBLIC.POST(ID) (14)"; SQL statement:
+delete from Post where id=? [23503-185]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.constraint.ConstraintReferential.checkRow(ConstraintReferential.java:426)
+	at org.h2.constraint.ConstraintReferential.checkRowRefTable(ConstraintReferential.java:443)
+	at org.h2.constraint.ConstraintReferential.checkRow(ConstraintReferential.java:318)
+	at org.h2.table.Table.fireConstraints(Table.java:920)
+	at org.h2.table.Table.fireAfterRow(Table.java:938)
+	at org.h2.command.dml.Delete.update(Delete.java:100)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:78)
+	at org.h2.command.Command.executeUpdate(Command.java:254)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:157)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:143)
+	at com.mchange.v2.c3p0.impl.NewProxyPreparedStatement.executeUpdate(NewProxyPreparedStatement.java:1449)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:186)
+	... 62 more
+</pre>
+                                                                                            </td>
+                    <td width="5%" align="right" class="time" valign="top">
+                        27 ms
+                    </td>
+                </tr>
+                                <tr>
+                    <td width="20%" class="passed" valign="top">
+                        <span>postComments</span>
+                    </td>
+                    <td class="" valign="top">
+                                                                        Ok
+                                            </td>
+                    <td width="5%" align="right" class="time" valign="top">
+                        8 ms
+                    </td>
+                </tr>
+                                <tr>
+                    <td width="20%" class="passed" valign="top">
+                        <span>testTags</span>
+                    </td>
+                    <td class="" valign="top">
+                                                                        Ok
+                                            </td>
+                    <td width="5%" align="right" class="time" valign="top">
+                        24 ms
+                    </td>
+                </tr>
+                                <tr>
+                    <td width="20%" class="passed" valign="top">
+                        <span>tryConnectAsUser</span>
+                    </td>
+                    <td class="" valign="top">
+                                                                        Ok
+                                            </td>
+                    <td width="5%" align="right" class="time" valign="top">
+                        17 ms
+                    </td>
+                </tr>
+                                <tr>
+                    <td width="20%" class="passed" valign="top">
+                        <span>createPost</span>
+                    </td>
+                    <td class="" valign="top">
+                                                                        Ok
+                                            </td>
+                    <td width="5%" align="right" class="time" valign="top">
+                        6 ms
+                    </td>
+                </tr>
+                                <tr>
+                    <td width="20%" class="passed" valign="top">
+                        <span>createAndRetrieveUser</span>
+                    </td>
+                    <td class="" valign="top">
+                                                                        Ok
+                                            </td>
+                    <td width="5%" align="right" class="time" valign="top">
+                        4 ms
+                    </td>
+                </tr>
+                            </table>
+        </div>
+        
+    </body>
+</html>
